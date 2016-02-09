@@ -41,12 +41,12 @@
                     <GradientStop Color="#FFDC00FF"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <StackPanel x:Name="human" Orientation="Vertical">
+            <StackPanel x:Name="human" Orientation="Vertical" MouseDown="human_MouseDown">
                 <Ellipse Stroke="Black" Fill="White" Height="10" Width="10" />
                 <Rectangle Stroke="Black" Fill="White" Height="25" Width="10" />
             </StackPanel>
             <TextBlock x:Name="gameOverText" TextWrapping="Wrap" Text="GameOver" FontFamily="Arial" FontSize="133.333" FontWeight="Bold" FontStyle="Italic" Canvas.Left="170" Canvas.Top="195"/>
-            <Rectangle x:Name="target" Height="50" Canvas.Left="65" Stroke="Black" Canvas.Top="340" Width="48" RenderTransformOrigin="0.5,0.5">
+            <Rectangle x:Name="target" Height="50" Canvas.Left="65" Stroke="Black" Canvas.Top="340" Width="48" RenderTransformOrigin="0.5,0.5" MouseEnter="target_MouseEnter">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

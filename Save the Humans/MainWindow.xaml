@@ -13,7 +13,7 @@
             </Grid>
         </ControlTemplate>
     </Window.Resources>
-    <Grid Background="Black">
+    <Grid x:Name="grid" Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140"/>
             <ColumnDefinition/>
@@ -33,7 +33,7 @@
             <ContentControl Content="ContentControl" VerticalAlignment="Center" HorizontalAlignment="Center" Template="{DynamicResource EnemyTemplate}"/>
         </StackPanel>
         <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="1" Height="20"/>
-        <Canvas x:Name="playArea" Grid.ColumnSpan="3">
+        <Canvas x:Name="playArea" Grid.ColumnSpan="3" MouseMove="playArea_MouseMove" MouseLeave="playArea_MouseLeave">
             <Canvas.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF8FF119" Offset="0"/>

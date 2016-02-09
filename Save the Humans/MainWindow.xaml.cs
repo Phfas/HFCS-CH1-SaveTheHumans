@@ -60,7 +60,7 @@ namespace Save_the_Humans
 
         private void EnemyTimer_Tick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            AddEnemy();
         }
 
         private void startButton_Click(object sender, RoutedEventArgs e)

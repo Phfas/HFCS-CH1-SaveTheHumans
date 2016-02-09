@@ -25,7 +25,7 @@
         </Grid.RowDefinitions>
         <Button x:Name="startButton" Content="Start!" 
                 HorizontalAlignment="Center" Grid.Row="1" 
-                VerticalAlignment="Center"/>
+                VerticalAlignment="Center" Click="startButton_Click"/>
         <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock x:Name="textBlock" 
         		TextWrapping="Wrap" 

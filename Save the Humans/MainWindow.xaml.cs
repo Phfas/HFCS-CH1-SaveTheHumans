@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace Save_the_Humans
 {
@@ -42,9 +43,19 @@ namespace Save_the_Humans
 
         }
 
-        private void AnimateEnemy(ContentControl enemy, int v1, double v2, string v3)
+        private void AnimateEnemy(ContentControl enemy, double from, double to, string propertyToAnimate)
         {
-            throw new NotImplementedException();
+            Storyboard storyboard = new Storyboard() { AutoReverse = true, RepeatBehavior = RepeatBehavior.Forever };
+            DoubleAnimation animation = new DoubleAnimation()
+            {
+                From = from,
+                To = to,
+                Duration = new Duration(TimeSpan.FromSeconds(random.Next(4, 6))),
+            };
+            Storyboard.SetTarget(animation, enemy);
+            Storyboard.SetTargetProperty(animation, new PropertyPath(propertyToAnimate));
+            storyboard.Children.Add(animation);
+            storyboard.Begin();
         }
     }
 }
